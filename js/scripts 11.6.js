@@ -101,7 +101,13 @@ $(function() {
     .click(function() {
       var name = prompt('Enter a column name');
       var column = new Column(name);
+      if(name!=null) {
+      if(name===""){
+          name = "Default name"
+      }
+
       board.addColumn(column);
+      }
     });
   var todoColumn = new Column('To do');
   var doingColumn = new Column('Doing');
